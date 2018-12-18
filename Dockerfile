@@ -50,6 +50,7 @@ RUN set -ex \
         git \
         alien \
         gcc \
+        gnupg \
     ' \
     # only need in dev env
     && testDeps=' \
@@ -95,7 +96,6 @@ RUN set -ex \
         libsasl2-modules \
         libmysqlclient-dev \
         libaio1 \
-        gnupg \
     # install oracle db basic
     # todo last to change baidu yun pan
     && curl -L https://github.com/sergeymakinen/docker-oracle-instant-client/raw/assets/oracle-instantclient$ORACLE_INSTANTCLIENT_MAJOR-basic-$ORACLE_INSTANTCLIENT_VERSION-1.x86_64.rpm -o /oracle-basic.rpm \
